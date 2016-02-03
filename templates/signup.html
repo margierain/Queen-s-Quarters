@@ -1,0 +1,25 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Sign Up{%endblock %}
+{% block navbar %}
+<div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation" class="active"><a href="/signup">sign Up</a></li>
+             <li role="presentation" ><a href="/signin">Sign in</a></li>
+            <!--<li role="presentation" ><a href="/adhouse">Add house</a></li> -->
+          </ul>
+        </nav>
+    </div>
+ </div>       
+{% endblock %}
+
+{% block content %}
+
+<div class="col-sm-6">
+
+<div class="well well-lg">{{wtf.quick_form(form)}}</div>
+
+{% endblock %}
