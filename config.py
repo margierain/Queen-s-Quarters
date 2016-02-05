@@ -1,4 +1,5 @@
 import os
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config:
@@ -6,7 +7,7 @@ class Config:
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = os.environ.get(
-        'SECRET_KEY')
+        'SECRET_KEY') or 'dsadfgcdtddfgsdtsdyqYTWRTEW'
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587
     MAIL_USE_TLS = True
@@ -16,3 +17,7 @@ class Config:
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, '.db')
+
+config= {
+    'default': Config
+}

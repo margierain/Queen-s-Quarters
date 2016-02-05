@@ -2,24 +2,26 @@
 {% import "bootstrap/wtf.html" as wtf %}block
 {% block title %}Sign Up{%endblock %}
 {% block navbar %}
-<div class="container">
-      <div class="header">
-        <nav>
-          <ul class="nav nav-pills pull-right">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" >Queen's Quarters</a>
+    </div>
+    <ul class="nav navbar-nav">
             <li role="presentation"><a href="/">Home</a></li>
             <li role="presentation" ><a href="/signup">sign Up</a></li>
             <li role="presentation" class="active" ><a href="#">Sign in</a></li>
-            <!--<li role="presentation" ><a href="/adhouse">Add house</a></li> -->
-          </ul>
-        </nav>
-    </div>
+            <li role="presentation" ><a href="/adhouse">Add house</a></li> 
+      </ul>
+  </div>
+</nav>
  </div>       
 {% endblock %}
 
 {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-sm-6 center-block">
+    <div class="col-md-8 col-md-offset-2">
       <h3>Sign up</h3>
       <form class="form-horizontal" role="form">
       <div class="well well-lg">{{wtf.quick_form(form)}}</div>
