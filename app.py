@@ -99,16 +99,17 @@ def signIn():
 	if form.validate_on_submit():
 		email = form.email.data
 		password = form.password.data
-
-		user = model.User.query.filter_by(email=form.email.data).first()
-		if user:
-			# log in
-			logout_user()
-			return "User exists", render_template("/adhouse.html")
-		else:
-			# redirect to sign up
+        return render_template("/signup.html", form=form)
+	
+		# user = model.User.query.filter_by(email=form.email.data).first()
+		# if user:
+		# 	# log in
+		# 	logout_user()
+		# 	return "User exists", render_template("/adhouse.html")
+		# else:
+		# 	# redirect to sign up
 			
-			return render_template("/signup.html", form=form)
+		# return render_template("/signup.html", form=form)
 	
 
 
